@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulários</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <form novalidate class="needs-validation">
+    <div class="mb-3">
+      <label class="form-label">Nome</label>
+      <input type="name" class="form-control" value="" required />
+      <div class="valid-feedback">
+        Nome válido
+      </div>
+      <div class="invalid-feedback">
+        Digite seu nome
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input aria-describedby="passwordHelp" type="password" class="form-control" placeholder="Digite sua senha"
+        required />
+      <span id="passwordHelp" class="form-text">Sua senha deve ter pelo menos 8 caracters</span>
+      <div class="valid-feedback">
+        Senha válida
+      </div>
+      <div class="invalid-feedback">
+        Digite sua senha
+      </div>
+    </div>
+
+    <button>Enviar</button>
+  </form>
+
+  <div class="mb-3">
+    <label class="form-label">Textarea</label>
+    <textarea class="form-control"></textarea>
+  </div>
+
+  <div class="row g-3 align-items-center bg-purple">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">Password</label>
+    </div>
+    <div class="col-auto">
+      <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+    </div>
+    <div class="col-auto">
+      <span id="passwordHelpInline" class="form-text">
+        Must be 8-20 characters long.
+      </span>
+    </div>
+
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Default file input example</label>
+      <input class="form-control" type="file" id="formFile" multiple>
+    </div>
+
+    <div class="mb-3">
+      <label for="formColor" class="form-label">Default file input example</label>
+      <input class="form-control" type="color" id="formColor">
+    </div>
+
+    <label for="exampleDataList" class="form-label">Datalist example</label>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+    <datalist id="datalistOptions">
+      <option value="San Francisco">
+      <option value="New York">
+      <option value="Seattle">
+      <option value="Los Angeles">
+      <option value="Chicago">
+    </datalist>
+  </div>
+
+  <select class="form-select form-select-sm" size="3" multiple aria-label="Abrir opções de estados">
+    <option selected>Qual o seu estado</option>
+    <option value="1">Bahia</option>
+    <option value="2">São Paulo</option>
+    <option value="3">Rio de Janeiro</option>
+  </select>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      Default checkbox
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      Default checkbox
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Default radio
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      Default checked radio
+    </label>
+  </div>
+
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+  </div>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+      aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+      aria-describedby="basic-addon2">
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
+
+  <div class="input-group">
+    <input type="text" aria-label="First name" class="form-control">
+    <input type="text" aria-label="Last name" class="form-control">
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <label for="floatingInput">Email address</label>
+  </div>
+  <div class="form-floating">
+    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <label for="floatingPassword">Password</label>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
